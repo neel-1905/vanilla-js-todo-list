@@ -55,7 +55,7 @@ class ListItem extends HTMLElement {
       this.dispatchEvent(
         new CustomEvent("delete-todo", {
           bubbles: true,
-          detail: { id },
+          detail: { todoId: id },
         })
       );
     });
