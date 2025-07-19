@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+* {
+  @apply box-border;
+}
+
+@layer base {
+  body {
+    @apply h-screen w-full;
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .add-input {
+    @apply border px-2 py-1 rounded-lg;
+  }
+
+  .update-input {
+    @apply border px-2 py-1 rounded-lg;
+  }
+
+  .add-btn {
+    @apply cursor-pointer border-none rounded-lg text-white bg-purple-600 px-3 py-1 text-base;
+  }
+
+  .todo-list {
+    @apply flex flex-col gap-4 w-full;
+  }
+
+  .list-item {
+    @apply w-full flex items-center justify-between bg-purple-100 p-3 rounded-lg;
+  }
+
+  .action-btn {
+    @apply px-2 py-2 rounded-lg text-sm text-white cursor-pointer;
+  }
+}
+
+@layer components {
+  .update-modal {
+    @apply fixed top-1/2 left-1/2 bg-white flex justify-center items-center flex-col gap-5 w-xl h-1/4 shadow-lg border border-amber-50 rounded-lg p-4 transform -translate-x-1/2 -translate-y-1/2;
+  }
+}
